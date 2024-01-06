@@ -5,6 +5,7 @@ import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import Grid from '@mui/material/Grid';
 
 import React from "react";
 import ReactDOM from "react-dom";
@@ -27,7 +28,7 @@ export function MDButton({ children, ...attrs }) {
 export function MDButtonGroup({ children, ...attrs}) {
   return (
     <ButtonGroup {...attrs}>{children}</ButtonGroup>
-  )
+  );
 }
 
 export function MDAutoComplete(attrs) {
@@ -36,11 +37,11 @@ export function MDAutoComplete(attrs) {
       {...attrs} 
       renderInput={(params) => <TextField {...params} label={attrs.label} />}
     />
-  )
+  );
 }
 
 export function MDCheckbox(attrs) {
-  return <Checkbox {...attrs} />
+  return <Checkbox {...attrs} />;
 }
 
 export function MDSelect(attrs) {
@@ -50,5 +51,13 @@ export function MDSelect(attrs) {
         return <MenuItem key={key} value={item.value}>{item.value}</MenuItem>
       })}
     </Select>
-  )
+  );
+}
+
+export function MDGrid({ children, ...attrs}) {
+  return (
+    <Grid {...attrs}>
+      {children}
+    </Grid>
+  );
 }
