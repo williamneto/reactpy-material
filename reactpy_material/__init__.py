@@ -1,6 +1,7 @@
 __version__ = "0.0.1"
 
-from .core import button, button_group, autocomplete, checkbox, select, grid
+from .core.components import button, button_group, autocomplete, checkbox, select
+from .core.layout import grid
 
 __all__ = [
     "button",
