@@ -5,7 +5,10 @@ import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
 
 import React from "react";
 import ReactDOM from "react-dom";
@@ -59,5 +62,21 @@ export function MDGrid({ children, ...attrs}) {
     <Grid {...attrs}>
       {children}
     </Grid>
+  );
+}
+
+export function MDContainer({ children, ...attrs}) {
+  return (
+    <Container {...attrs}>
+      {children}
+    </Container>
+  );
+}
+
+export function MDBox({ children, ...attrs}) {
+  return (
+    <Box {...attrs}>
+      {children}
+    </Box>
   );
 }

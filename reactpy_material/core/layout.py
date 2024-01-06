@@ -12,6 +12,8 @@ _js_module = module_from_file(
 )
 
 md_grid = export(_js_module, "MDGrid")
+md_container = export(_js_module, "MDContainer")
+md_box = export(_js_module, "MDBox")
 
 @component
 def grid(*children: VdomChild, attrs: Any = {}):    
@@ -23,3 +25,26 @@ def grid(*children: VdomChild, attrs: Any = {}):
             children_items += (c, )
 
     return md_grid(attrs, children_items)
+
+@component
+def container(*children: VdomChild, attrs: Any = {}):
+    children_items = ()
+    for c in children:
+        if isinstance(c, Component):
+            children_items += (c.render(), )
+        else:
+            children_items += (c, )
+
+    return md_container(attrs, children_items)
+
+@component
+def box(*children: VdomChild, attrs: Any = {}):
+    children_items = ()
+    for c in children:
+        if isinstance(c, Component):
+            children_items += (c.render(), )
+        else:
+            children_items += (c, )
+
+    return md_box(attrs, children_items)
+
