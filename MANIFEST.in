@@ -1,0 +1,4 @@
+include README.md
+include reactpy_material/bundle.js
+include reactpy_material/py.typed
+include LICENSE

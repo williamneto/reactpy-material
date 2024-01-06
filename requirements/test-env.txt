@@ -1,0 +1,5 @@
+twine
+pytest
+pytest-asyncio
+pytest-cov
+reactpy[testing,starlette]
