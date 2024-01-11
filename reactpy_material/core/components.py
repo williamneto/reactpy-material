@@ -16,7 +16,7 @@ md_button_group = export(_js_module, "MDButtonGroup")
 md_autocomplete = export(_js_module, "MDAutoComplete")
 md_checkbox = export(_js_module, "MDCheckbox")
 md_select = export(_js_module, "MDSelect")
-
+md_text_field = export(_js_module, "MDTextField")
 
 @component
 def button(*children: VdomChild, attrs: Any = {}):
@@ -44,3 +44,7 @@ def checkbox(attrs: Any = {}):
 @component
 def select(attrs: Any = {}):
     return md_select(attrs)
+
+@component
+def text_field(attrs: Any = {}):
+    return md_text_field(attrs)

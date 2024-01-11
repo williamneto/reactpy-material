@@ -32,11 +32,13 @@
     "rollup-plugin-replace": "^2.2.0"
   },
   "dependencies": {
-    "htm": "^3.0.4",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "@emotion/react": "11.11.3",
     "@emotion/styled": "11.11.0",
-    "@mui/material": "5.15.3"
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.15.4",
+    "@mui/material": "5.15.3",
+    "htm": "^3.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }

@@ -5,6 +5,16 @@ import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+
+import * as IconsMaterial from "@mui/icons-material";
+const iconsDict = {...IconsMaterial}
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -12,6 +22,7 @@ import Container from '@mui/material/Container';
 
 import React from "react";
 import ReactDOM from "react-dom";
+
 
 export function bind(node) {
   return {
@@ -79,4 +90,41 @@ export function MDBox({ children, ...attrs}) {
       {children}
     </Box>
   );
+}
+
+export function MDTextField(attrs){
+  return <TextField {...attrs} />
+}
+
+export function MDIcon(attrs){
+  let DynamicIcon = iconsDict[attrs.icon];
+  return <DynamicIcon {...attrs} />
+}
+
+export function MDTypography({ children, ...attrs}) {
+  return <Typography {...attrs}>{children}</Typography>
+}
+
+export function MDTableContainer({ children, ...attrs}) {
+  return <TableContainer {...attrs}>{children}</TableContainer>
+}
+
+export function MDTable({ children, ...attrs}) {
+  return <Table {...attrs}>{children}</Table>
+}
+
+export function MDTableBody({ children, ...attrs}) {
+  return <TableBody {...attrs}>{children}</TableBody>
+}
+
+export function MDTableCell({ children, ...attrs}) {
+  return <TableCell {...attrs}>{children}</TableCell>
+}
+
+export function MDTableHead({ children, ...attrs}) {
+  return <TableHead {...attrs}>{children}</TableHead>
+}
+
+export function MDTableRow({ children, ...attrs}) {
+  return <TableRow {...attrs}>{children}</TableRow>
 }
