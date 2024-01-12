@@ -12,6 +12,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Stack from '@mui/material/Stack';
 
 import * as IconsMaterial from "@mui/icons-material";
 const iconsDict = {...IconsMaterial}
@@ -127,4 +128,8 @@ export function MDTableHead({ children, ...attrs}) {
 
 export function MDTableRow({ children, ...attrs}) {
   return <TableRow {...attrs}>{children}</TableRow>
+}
+
+export function MDStack({ children, ...attrs}) {
+  return <Stack {...attrs}>{children}</Stack>
 }

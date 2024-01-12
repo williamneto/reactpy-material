@@ -14,6 +14,7 @@ _js_module = module_from_file(
 md_grid = export(_js_module, "MDGrid")
 md_container = export(_js_module, "MDContainer")
 md_box = export(_js_module, "MDBox")
+md_stack = export(_js_module, "MDStack")
 
 @component
 def grid(*children: VdomChild, attrs: Any = {}):    
@@ -47,4 +48,15 @@ def box(*children: VdomChild, attrs: Any = {}):
             children_items += (c, )
 
     return md_box(attrs, children_items)
+
+@component
+def stack(*children: VdomChild, attrs: Any = {}):
+    children_items = ()
+    for c in children:
+        if isinstance(c, Component):
+            children_items += (c.render(), )
+        else:
+            children_items += (c, )
+
+    return md_stack(attrs, children_items)
 

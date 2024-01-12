@@ -7,7 +7,7 @@ from .core.components import (
     checkbox,
     select
 )
-from .core.layout import grid, container, box
+from .core.layout import grid, container, box, stack
 from .core.data_display import (
     icon,
     typography,
@@ -28,6 +28,7 @@ __all__ = [
     "grid",
     "container",
     "box",
+    "stack",
     "icon",
     "typography",
     "table_row",
