@@ -14,17 +14,14 @@ def app():
         {"username": "joe", "email": "joe@mail.com"},
         {"username": "doe", "email": "doe@gmail.com"}
     ]
-    def render_table_content():
-        content = []
-        for item in table_data:
-            content.append(
-                table
-            )
+    def render_table_body():
         return (
-            table_row(
-                table_cell(item.get("username")),
-                table_cell(item.get("email"))
-            ) for item in table_data
+            table_body(
+                table_row(
+                    table_cell(item.get("username")),
+                    table_cell(item.get("email"))
+                ) for item in table_data
+            )
         )
             
     return html.div(
@@ -36,16 +33,7 @@ def app():
                         table_cell("E-mail")
                     )
                 ),
-                table_body(
-                    table_row(
-                        table_cell("joe"),
-                        table_cell("joe@mail.com")
-                    ),
-                    table_row(
-                        table_cell("jane"),
-                        table_cell("jane@mail.com")
-                    ),
-                ),
+                render_table_body(),
                 attrs={
                     "sx": {"minWidth": 650}
                 }

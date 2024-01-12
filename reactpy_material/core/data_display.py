@@ -74,6 +74,8 @@ def table_body(*children: VdomChild, attrs: Any = {}):
     for c in children:
         if isinstance(c, Component):
             children_items += (c.render(), )
+        if isinstance(c, GeneratorType):
+            children_items += (c, )
         else:
             children_items += (c, )
 
