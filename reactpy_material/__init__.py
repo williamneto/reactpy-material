@@ -5,7 +5,8 @@ from .core.components import (
     button_group,
     autocomplete,
     checkbox,
-    select
+    select,
+    text_field
 )
 from .core.layout import grid, container, box, stack
 from .core.data_display import (
@@ -34,6 +35,7 @@ __all__ = [
     "autocomplete",
     "checkbox",
     "select",
+    "text_field",
     "grid",
     "container",
     "box",
