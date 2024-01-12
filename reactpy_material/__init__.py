@@ -18,6 +18,7 @@ from .core.data_display import (
     table_container,
     table,
 )
+from .core.navigation import tab, tabs, pagination
 
 __all__ = [
     "button",
@@ -36,5 +37,8 @@ __all__ = [
     "table_cell",
     "table_body",
     "table",
-    "table_container"
+    "table_container",
+    "tab",
+    "tabs",
+    "pagination"
 ]

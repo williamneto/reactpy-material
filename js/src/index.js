@@ -13,6 +13,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Stack from '@mui/material/Stack';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Pagination from '@mui/material/Pagination';
 
 import * as IconsMaterial from "@mui/icons-material";
 const iconsDict = {...IconsMaterial}
@@ -132,4 +135,16 @@ export function MDTableRow({ children, ...attrs}) {
 
 export function MDStack({ children, ...attrs}) {
   return <Stack {...attrs}>{children}</Stack>
+}
+
+export function MDTab({ children, ...attrs}) {
+  return <Tab {...attrs}>{children}</Tab>
+}
+
+export function MDTabs({ children, ...attrs}) {
+  return <Tabs {...attrs}>{children}</Tabs>
+}
+
+export function MDPagination({ children, ...attrs}) {
+  return <Pagination {...attrs}>{children}</Pagination>
 }
