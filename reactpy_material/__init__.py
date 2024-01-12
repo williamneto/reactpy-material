@@ -18,7 +18,15 @@ from .core.data_display import (
     table_container,
     table,
 )
-from .core.navigation import tab, tabs, pagination
+from .core.navigation import (
+    tab, 
+    tabs, 
+    pagination,
+    menu, 
+    menu_item,
+    speed_dial,
+    speed_dial_action
+)
 
 __all__ = [
     "button",
@@ -40,5 +48,9 @@ __all__ = [
     "table_container",
     "tab",
     "tabs",
-    "pagination"
+    "pagination",
+    "menu",
+    "menu_item",
+    "speed_dial",
+    "speed_dial_action"
 ]

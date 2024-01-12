@@ -16,6 +16,9 @@ import Stack from '@mui/material/Stack';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Pagination from '@mui/material/Pagination';
+import Menu from '@mui/material/Menu';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
 
 import * as IconsMaterial from "@mui/icons-material";
 const iconsDict = {...IconsMaterial}
@@ -145,6 +148,22 @@ export function MDTabs({ children, ...attrs}) {
   return <Tabs {...attrs}>{children}</Tabs>
 }
 
-export function MDPagination({ children, ...attrs}) {
-  return <Pagination {...attrs}>{children}</Pagination>
+export function MDPagination(attrs) {
+  return <Pagination {...attrs} />
+}
+
+export function MDMenu({ children, ...attrs}) {
+  return <Menu {...attrs}>{children}</Menu>
+}
+
+export function MDMenuItem({ children, ...attrs}) {
+  return <MenuItem {...attrs}>{children}</MenuItem>
+}
+
+export function MDSpeedDial({ children, ...attrs}) {
+  return <SpeedDial {...attrs}>{children}</SpeedDial>
+}
+
+export function MDSpeedDialAction(attrs) {
+  return <SpeedDialAction {...attrs} />
 }
