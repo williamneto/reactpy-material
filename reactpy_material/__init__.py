@@ -33,6 +33,12 @@ from .core.feedback import (
     linear_progress,
     alert
 )
+from .core.surfaces import (
+    accordion,
+    accordion_actions,
+    accordion_details,
+    accordion_summary
+)
 
 __all__ = [
     "button",
@@ -62,5 +68,9 @@ __all__ = [
     "speed_dial_action",
     "circular_progress",
     "linear_progress",
-    "alert"
+    "alert",
+    "accordion",
+    "accordion_actions",
+    "accordion_details",
+    "accordion_summary"
 ]

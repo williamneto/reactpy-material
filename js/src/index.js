@@ -22,6 +22,10 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 import CircularProgress from '@mui/material/CircularProgress';
 import LinearProgress from '@mui/material/LinearProgress';
 import Alert from '@mui/material/Alert';
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 
 import * as IconsMaterial from "@mui/icons-material";
 const iconsDict = {...IconsMaterial}
@@ -181,4 +185,20 @@ export function MDLinearProgress(attrs) {
 
 export function MDAlert({ children, ...attrs }) {
   return <Alert {...attrs}>{children}</Alert>
+}
+
+export function MDAccordion({ children, ...attrs }) {
+  return <Accordion {...attrs}>{children}</Accordion>
+}
+
+export function MDAccordionSummary({ children, ...attrs }) {
+  return <AccordionSummary {...attrs}>{children}</AccordionSummary>
+}
+
+export function MDAccordionActions({ children, ...attrs }) {
+  return <AccordionActions {...attrs}>{children}</AccordionActions>
+}
+
+export function MDAccordionDetails({ children, ...attrs }) {
+  return <AccordionDetails {...attrs}>{children}</AccordionDetails>
 }
