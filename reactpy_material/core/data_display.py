@@ -5,6 +5,8 @@ from reactpy.core.component import Component
 from reactpy.web.module import export, module_from_file
 from reactpy.core.types import VdomChild
 
+from .utils import _parse_children
+
 _js_module = module_from_file(
     "reactpy-material",
     file=Path(__file__).parents[1] / "bundle.js"
@@ -25,77 +27,28 @@ def icon(attrs: Any = {}):
 
 @component
 def typography(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_typography(attrs, children_items)
+    return md_typography(attrs, _parse_children(children))
 
 @component
 def table_row(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_table_row(attrs, children_items)
+    return md_table_row(attrs, _parse_children(children))
 
 @component
 def table_head(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_table_head(attrs, children_items)
+    return md_table_head(attrs, _parse_children(children))
 
 @component
 def table_cell(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_table_cell(attrs, children_items)
+    return md_table_cell(attrs, _parse_children(children))
 
 @component
 def table_body(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_table_body(attrs, children_items)
+    return md_table_body(attrs, _parse_children(children))
 
 @component
 def table(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_table(attrs, children_items)
+    return md_table(attrs, _parse_children(children))
 
 @component
 def table_container(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_table_container(attrs, children_items)
+    return md_table_container(attrs, _parse_children(children))

@@ -6,6 +6,8 @@ from reactpy.core.component import Component
 from reactpy.web.module import export, module_from_file
 from reactpy.core.types import VdomChild
 
+from .utils import _parse_children
+
 _js_module = module_from_file(
     "reactpy-material",
     file=Path(__file__).parents[1] / "bundle.js"
@@ -18,44 +20,16 @@ md_accordion_details = export(_js_module, "MDAccordionDetails")
 
 @component
 def accordion(*children: VdomChild, attrs: Any = {}):    
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_accordion(attrs, children_items)
+    return md_accordion(attrs, _parse_children(children))
 
 @component
 def accordion_summary(*children: VdomChild, attrs: Any = {}):    
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_accordion_summary(attrs, children_items)
+    return md_accordion_summary(attrs, _parse_children(children))
 
 @component
 def accordion_actions(*children: VdomChild, attrs: Any = {}):    
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_accordion_actions(attrs, children_items)
+    return md_accordion_actions(attrs, _parse_children(children))
 
 @component
 def accordion_details(*children: VdomChild, attrs: Any = {}):    
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_accordion_details(attrs, children_items)
+    return md_accordion_details(attrs, _parse_children(children))

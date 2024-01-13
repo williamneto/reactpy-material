@@ -5,6 +5,8 @@ from reactpy.core.component import Component
 from reactpy.web.module import export, module_from_file
 from reactpy.core.types import VdomChild
 
+from .utils import _parse_children
+
 _js_module = module_from_file(
     "reactpy-material",
     file=Path(__file__).parents[1] / "bundle.js"
@@ -24,11 +26,4 @@ def linear_progress(attrs: Any = {}):
 
 @component
 def alert(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_alert(attrs, children_items)
+    return md_alert(attrs, _parse_children(children))

@@ -6,6 +6,8 @@ from reactpy.core.component import Component
 from reactpy.web.module import export, module_from_file
 from reactpy.core.types import VdomChild
 
+from .utils import _parse_children
+
 _js_module = module_from_file(
     "reactpy-material",
     file=Path(__file__).parents[1] / "bundle.js"
@@ -24,14 +26,7 @@ def button(*children: VdomChild, attrs: Any = {}):
 
 @component
 def button_group(*children: VdomChild, attrs: Any = {}):
-    children_items = ()
-    for c in children:
-        if isinstance(c, Component):
-            children_items += (c.render(), )
-        else:
-            children_items += (c, )
-
-    return md_button_group(attrs, children_items)
+    return md_button_group(attrs, _parse_children(children))
 
 @component
 def autocomplete(attrs: Any = {}):
