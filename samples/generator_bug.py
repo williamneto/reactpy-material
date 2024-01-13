@@ -6,7 +6,7 @@ def app():
     data = ["item 1", "item 2", "item 3"]
 
     return grid(
-        [box(item) for item in data]
+        *[box(item) for item in data]
     )
 
 run(app)
