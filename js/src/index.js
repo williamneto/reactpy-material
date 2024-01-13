@@ -19,6 +19,9 @@ import Pagination from '@mui/material/Pagination';
 import Menu from '@mui/material/Menu';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
+import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress from '@mui/material/LinearProgress';
+import Alert from '@mui/material/Alert';
 
 import * as IconsMaterial from "@mui/icons-material";
 const iconsDict = {...IconsMaterial}
@@ -166,4 +169,16 @@ export function MDSpeedDial({ children, ...attrs}) {
 
 export function MDSpeedDialAction(attrs) {
   return <SpeedDialAction {...attrs} />
+}
+
+export function MDCircularProgress(attrs) {
+  return <CircularProgress {...attrs} />
+}
+
+export function MDLinearProgress(attrs) {
+  return <LinearProgress {...attrs} />
+}
+
+export function MDAlert({ children, ...attrs }) {
+  return <Alert {...attrs}>{children}</Alert>
 }

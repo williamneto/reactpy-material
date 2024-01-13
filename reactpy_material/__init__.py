@@ -28,6 +28,11 @@ from .core.navigation import (
     speed_dial,
     speed_dial_action
 )
+from .core.feedback import (
+    circular_progress,
+    linear_progress,
+    alert
+)
 
 __all__ = [
     "button",
@@ -54,5 +59,8 @@ __all__ = [
     "menu",
     "menu_item",
     "speed_dial",
-    "speed_dial_action"
+    "speed_dial_action",
+    "circular_progress",
+    "linear_progress",
+    "alert"
 ]

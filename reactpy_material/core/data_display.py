@@ -1,6 +1,5 @@
 from pathlib import Path
 from typing import Any
-from types import GeneratorType
 from reactpy import component
 from reactpy.core.component import Component
 from reactpy.web.module import export, module_from_file
