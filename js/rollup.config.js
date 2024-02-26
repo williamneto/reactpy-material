@@ -29,6 +29,9 @@ export default {
       // skip warning where `this` is undefined at the top level of a module
       return;
     }
+    else if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
+      return;
+    }
     console.warn(warning.message);
   },
 };
