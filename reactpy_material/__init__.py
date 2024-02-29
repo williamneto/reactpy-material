@@ -6,9 +6,12 @@ from .core.components import (
     autocomplete,
     checkbox,
     select,
-    text_field
+    text_field,
+    switch,
+    input_label,
+    chip
 )
-from .core.layout import grid, container, box, stack
+from .core.layout import grid, container, box, stack, form_control
 from .core.data_display import (
     icon,
     typography,
@@ -72,5 +75,9 @@ __all__ = [
     "accordion",
     "accordion_actions",
     "accordion_details",
-    "accordion_summary"
+    "accordion_summary",
+    "switch",
+    "form_control",
+    "input_label",
+    "chip"
 ]
