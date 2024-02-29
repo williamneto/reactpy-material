@@ -26,6 +26,10 @@ import Accordion from '@mui/material/Accordion';
 import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
+import Switch from "@mui/material/Switch";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Chip from "@mui/material/Chip";
 
 import * as IconsMaterial from "@mui/icons-material";
 const iconsDict = {...IconsMaterial}
@@ -36,6 +40,7 @@ import Container from '@mui/material/Container';
 
 import React from "react";
 import ReactDOM from "react-dom";
+import { Input } from "@mui/material";
 
 
 export function bind(node) {
@@ -72,12 +77,10 @@ export function MDCheckbox(attrs) {
   return <Checkbox {...attrs} />;
 }
 
-export function MDSelect(attrs) {
+export function MDSelect({children, ...attrs}) {
   return (
     <Select {...attrs}>
-      {attrs.options.map( (item, key) => {
-        return <MenuItem key={key} value={item.value}>{item.value}</MenuItem>
-      })}
+      {children}
     </Select>
   );
 }
@@ -202,3 +205,20 @@ export function MDAccordionActions({ children, ...attrs }) {
 export function MDAccordionDetails({ children, ...attrs }) {
   return <AccordionDetails {...attrs}>{children}</AccordionDetails>
 }
+
+export function MDSwitch(attrs) {
+  return <Switch {...attrs} />
+}
+
+export function MDChip(attrs) {
+  return <Chip {...attrs} />
+}
+
+export function MDFormControl({ children, ...attrs}) {
+  return <FormControl {...attrs}>{children}</FormControl>
+}
+
+export function MDInputLabel({ children, ...attrs}) {
+  return <InputLabel {...attrs}>{children}</InputLabel>
+}
+

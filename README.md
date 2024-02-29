@@ -1,24 +1,29 @@
 
 # reactpy-material
 
-This project provide Material UI components to be used in [reactpy](github.com/reactive-python/reactpy) projects. 
+This project provide Material UI components to be used in [reactpy](https://github.com/reactive-python/reactpy) projects. 
 For a deep understanding of the components and its properties check the [Material UI Docs](https://mui.com/material-ui/getting-started/).
 
 ## Available components
 
 Layout
-- [Grid](https://mui.com/material-ui/react-grid/)
-- [Container](https://mui.com/material-ui/react-container/)
 - [Box](https://mui.com/material-ui/react-box/)
+- [Container](https://mui.com/material-ui/react-container/)
+- [Form Contol](https://mui.com/material-ui/api/form-control/)
+- [Grid](https://mui.com/material-ui/react-grid/)
 - [Stack](https://mui.com/material-ui/react-stack/)
 
 Inputs
+- [Autocomplete](https://mui.com/material-ui/react-autocomplete/)
 - [Button](https://mui.com/material-ui/react-button/)
 - [Button group](https://mui.com/material-ui/react-button-group/)
-- [Autocomplete](https://mui.com/material-ui/react-autocomplete/)
 - [Checkbox](https://mui.com/material-ui/react-checkbox/)
+- [Chip](https://mui.com/material-ui/react-chip/)
+- [Input](https://mui.com/material-ui/api/input/)
+- [Input label](https://mui.com/material-ui/api/input-label/)
 - [Select](https://mui.com/material-ui/react-select/)
-- [Text Field](https://mui.com/material-ui/react-text-field/)
+- [Text field](https://mui.com/material-ui/react-text-field/)
+- [Switch](https://mui.com/material-ui/react-switch/)
 
 Data display
 - [Icons](https://mui.com/material-ui/icons/)
@@ -34,6 +39,7 @@ Navigation
 - [Speed dial](https://mui.com/material-ui/react-speed-dial/)
 - [Pagination](https://mui.com/material-ui/react-pagination/)
 - [Menu](https://mui.com/material-ui/react-menu/)
+- [Menu item](https://mui.com/material-ui/api/menu-item/)
 - [Tabs](https://mui.com/material-ui/react-tabs/)
 
 ## Samples

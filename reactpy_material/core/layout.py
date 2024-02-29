@@ -17,6 +17,7 @@ md_grid = export(_js_module, "MDGrid")
 md_container = export(_js_module, "MDContainer")
 md_box = export(_js_module, "MDBox")
 md_stack = export(_js_module, "MDStack")
+md_form_control = export(_js_module, "MDFormControl")
 
 @component
 def grid(*children: VdomChild, attrs: Any = {}):    
@@ -34,3 +35,13 @@ def box(*children: VdomChild, attrs: Any = {}):
 def stack(*children: VdomChild, attrs: Any = {}):
     return md_stack(attrs, _parse_children(children))
 
+@component
+def form_control(*children: VdomChild, attrs: Any = {}):
+    children_items = ()
+    for c in children:
+        if isinstance(c, Component):
+            children_items += (c.render(), )
+        else:
+            children_items += (c, )
+
+    return md_form_control(attrs, children_items)

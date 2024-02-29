@@ -19,6 +19,11 @@ md_autocomplete = export(_js_module, "MDAutoComplete")
 md_checkbox = export(_js_module, "MDCheckbox")
 md_select = export(_js_module, "MDSelect")
 md_text_field = export(_js_module, "MDTextField")
+md_switch = export(_js_module, "MDSwitch")
+md_input = export(_js_module, "MDInput")
+md_input_label = export(_js_module, "MDInputLabel")
+md_menu_item = export(_js_module, "MDMenuItem")
+md_chip = export(_js_module, "MDChip")
 
 @component
 def button(*children: VdomChild, attrs: Any = {}):
@@ -37,9 +42,50 @@ def checkbox(attrs: Any = {}):
     return md_checkbox(attrs)
 
 @component
-def select(attrs: Any = {}):
-    return md_select(attrs)
+def select(*children: VdomChild, attrs: Any = {}):
+    children_items = ()
+    for c in children:
+        if isinstance(c, Component):
+            children_items += (c.render(), )
+        else:
+            children_items += (c, )
+    return md_select(attrs, children_items)
+
 
 @component
 def text_field(attrs: Any = {}):
     return md_text_field(attrs)
+
+
+@component
+def switch(attrs: Any = {}):
+    return md_switch(attrs)
+
+
+@component
+def input_label(*children: VdomChild, attrs: Any = {}):
+    children_items = ()
+    for c in children:
+        if isinstance(c, Component):
+            children_items += (c.render(), )
+        else:
+            children_items += (c, )
+
+    return md_input_label(attrs, children_items)
+
+
+@component
+def menu_item(*children: VdomChild, attrs: Any = {}):
+    children_items = ()
+    for c in children:
+        if isinstance(c, Component):
+            children_items += (c.render(), )
+        else:
+            children_items += (c, )
+
+    return md_menu_item(attrs, children_items)
+
+
+@component
+def chip(attrs: Any = {}):
+    return md_chip(attrs)
