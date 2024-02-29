@@ -1,7 +1,7 @@
 
 # reactpy-material
 
-This project provide Material UI components to be used in [reactpy](github.com/reactive-python/reactpy) projects. 
+This project provide Material UI components to be used in [reactpy](https://github.com/reactive-python/reactpy) projects. 
 For a deep understanding of the components and its properties check the [Material UI Docs](https://mui.com/material-ui/getting-started/).
 
 ## Available components
