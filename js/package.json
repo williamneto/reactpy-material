@@ -37,6 +37,7 @@
     "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.15.4",
     "@mui/material": "^5.15.3",
+    "@mui/x-data-grid": "^7.4.0",
     "htm": "^3.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
