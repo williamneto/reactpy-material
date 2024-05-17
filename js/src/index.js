@@ -30,6 +30,7 @@ import Switch from "@mui/material/Switch";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Chip from "@mui/material/Chip";
+import { DataGrid } from '@mui/x-data-grid';
 
 import * as IconsMaterial from "@mui/icons-material";
 const iconsDict = {...IconsMaterial}
@@ -40,7 +41,6 @@ import Container from '@mui/material/Container';
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Input } from "@mui/material";
 
 
 export function bind(node) {
@@ -222,3 +222,6 @@ export function MDInputLabel({ children, ...attrs}) {
   return <InputLabel {...attrs}>{children}</InputLabel>
 }
 
+export function MDDataGrid(attrs) {
+  return <DataGrid {...attrs} />
+}
