@@ -21,6 +21,7 @@ from .core.data_display import (
     table_body,
     table_container,
     table,
+    datagrid
 )
 from .core.navigation import (
     tab, 
@@ -79,5 +80,6 @@ __all__ = [
     "switch",
     "form_control",
     "input_label",
-    "chip"
+    "chip",
+    "datagrid"
 ]

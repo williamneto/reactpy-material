@@ -20,6 +20,7 @@ md_table_cell = export(_js_module, "MDTableCell")
 md_table_body = export(_js_module, "MDTableBody")
 md_table = export(_js_module, "MDTable")
 md_table_container = export(_js_module, "MDTableContainer")
+md_datagrid = export(_js_module, "MDDataGrid")
 
 @component
 def icon(attrs: Any = {}):
@@ -52,3 +53,8 @@ def table(*children: VdomChild, attrs: Any = {}):
 @component
 def table_container(*children: VdomChild, attrs: Any = {}):
     return md_table_container(attrs, _parse_children(children))
+
+
+@component
+def datagrid(attrs: Any = {}):
+    return md_datagrid(attrs)
